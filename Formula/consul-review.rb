@@ -3,30 +3,30 @@
 class ConsulReview < Formula
   desc "Orchestrate multiple AI agents to review GitHub Pull Requests in parallel"
   homepage "https://github.com/Binsabbar/consul-review"
-  version "1.0.0-rc.1"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0-rc.1/consul-review_1.0.0-rc.1_darwin_arm64.tar.gz"
-      sha256 "1d04c46774e5a9aeb9091b09f88a68d0fa289485fa02adbba75b3321c4ec5215"
+      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0/consul-review_1.0.0_darwin_arm64.tar.gz"
+      sha256 "5cc07cf0489b6cd5374e193e19e6b85897ed7c1bfa1afca8893f1e2207394f4c"
     end
 
     on_intel do
-      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0-rc.1/consul-review_1.0.0-rc.1_darwin_amd64.tar.gz"
-      sha256 "0a3cd5e1e855844d1c335905b9fab8bee2feba3f7d89be10345b68b316a98036"
+      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0/consul-review_1.0.0_darwin_amd64.tar.gz"
+      sha256 "ce5d2961f60abcff5a4be7bf0fa13fa8aea7727647102e7317bb1559ae51c6bd"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0-rc.1/consul-review_1.0.0-rc.1_linux_arm64.tar.gz"
-      sha256 "b134a76d58353e74f9aa5065ba10b8c99fdc31e51d3f5b0d621232fb0dcb34d0"
+      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0/consul-review_1.0.0_linux_arm64.tar.gz"
+      sha256 "02539b74a4bd7776d3433d1029f13ce5b10560298ad1531805e9af1c8bfa5530"
     end
 
     on_intel do
-      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0-rc.1/consul-review_1.0.0-rc.1_linux_amd64.tar.gz"
-      sha256 "5f3a933f1ec2ed7f0270a4fbf91547995cf8ecf97b05f526d271644c8aa89f19"
+      url "https://github.com/Binsabbar/consul-review/releases/download/v1.0.0/consul-review_1.0.0_linux_amd64.tar.gz"
+      sha256 "e65fa479a108a3066c7ee12eccbb487a8817344af177bd24e231b2499f0c9ac0"
     end
   end
 
