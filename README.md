@@ -10,6 +10,24 @@ brew tap binsabbar/tap
 
 ## Available Formulae
 
+| Formula | Description | Install |
+|---------|-------------|---------|
+| [consul-review](#consul-review) | Orchestrate multiple AI agents to review GitHub Pull Requests in parallel | `brew install binsabbar/tap/consul-review` |
+| [tasklog](#tasklog) | Interactive CLI tool for tracking time on Jira tasks with Jira Cloud and Tempo integration | `brew install binsabbar/tap/tasklog` |
+| [vault-sync](#vault-sync) | Production-ready tool for synchronizing secrets across multiple HashiCorp Vault clusters | `brew install binsabbar/tap/vault-sync` |
+
+---
+
+### consul-review
+
+Orchestrate multiple AI agents to review GitHub Pull Requests in parallel.
+
+```bash
+brew install binsabbar/tap/consul-review
+```
+
+See [consul-review repository](https://github.com/Binsabbar/consul-review) for configuration and usage details.
+
 ### tasklog
 
 Interactive CLI tool for tracking time on Jira tasks with Jira Cloud and Tempo integration.
