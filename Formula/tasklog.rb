@@ -30,6 +30,11 @@ class Tasklog < Formula
     end
   end
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   def install
     bin.install "tasklog"
   end

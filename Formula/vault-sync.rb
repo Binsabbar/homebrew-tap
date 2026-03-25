@@ -30,6 +30,11 @@ class VaultSync < Formula
     end
   end
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   def install
     bin.install "vault-sync"
   end

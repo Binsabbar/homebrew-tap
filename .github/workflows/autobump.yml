@@ -23,26 +23,29 @@ jobs:
       - name: Tap this repository
         run: brew tap binsabbar/tap "$(pwd)"
 
-      - name: Bump consul-review formula
+      - name: Bump all formulae
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          brew bump-formula-pr \
-            --no-browse \
-            --write-only \
-            binsabbar/tap/consul-review
+          for formula in consul-review tasklog vault-sync; do
+            echo "==> Checking $formula"
+            brew bump-formula-pr \
+              --no-browse \
+              --write-only \
+              "binsabbar/tap/$formula" || echo "No update needed for $formula"
+          done
 
       - name: Commit and push changes
         run: |
           tap_dir="$(brew --repository binsabbar/tap)"
           cd "$tap_dir"
           if git diff --quiet; then
-            echo "No changes to commit"
+            echo "All formulae are already up to date — nothing to push"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git add Formula/
-          git commit -m "auto-bump: update formula to latest release"
+          git commit -m "auto-bump: update formulae to latest releases"
           git push
